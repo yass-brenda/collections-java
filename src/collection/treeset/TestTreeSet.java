@@ -30,8 +30,16 @@ public class TestTreeSet {
         //Article comparatorArticle  = new Article(); // Construction of objects comparator
         //TreeSet <Article> ordenString = new TreeSet<Article>(comparatorArticle); // Los objetos se ordenaran almacenados segun lo que marque comparatorArticle
 
-        ComparatorArticle compara_art  = new ComparatorArticle();
-        TreeSet<Article> ordenString =new TreeSet<Article>(compara_art);
+        // ComparatorArticle compara_art  = new ComparatorArticle();
+        TreeSet<Article> ordenString =new TreeSet<Article>(new Comparator<Article>() {
+            @Override
+            public int compare(Article o1, Article o2) {
+                String desc1 = o1.getDesc();
+                String desc2 = o2.getDesc();
+
+                return desc1.compareTo(desc2);
+            }
+        });
         ordenString.add(firstA);
         ordenString.add(secondA);
         ordenString.add(threeA);
@@ -67,15 +75,4 @@ class Article implements Comparable<Article> {
     }
 
 
-}
-
-class ComparatorArticle implements Comparator<Article>{
-
-    @Override
-    public int compare(Article o1, Article o2) {
-        String desc1 = o1.getDesc();
-        String desc2 = o2.getDesc();
-
-        return desc1.compareTo(desc2);
-    }
 }
