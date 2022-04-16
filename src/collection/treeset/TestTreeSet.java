@@ -27,8 +27,11 @@ public class TestTreeSet {
             System.out.println(article.getDesc());
         }
 
-        Article comparatorArticle  = new Article(); // Construction of objects comparator
-        TreeSet <Article> ordenString = new TreeSet<Article>(comparatorArticle); // Los objetos se ordenaran almacenados segun lo que marque comparatorArticle
+        //Article comparatorArticle  = new Article(); // Construction of objects comparator
+        //TreeSet <Article> ordenString = new TreeSet<Article>(comparatorArticle); // Los objetos se ordenaran almacenados segun lo que marque comparatorArticle
+
+        ComparatorArticle compara_art  = new ComparatorArticle();
+        TreeSet<Article> ordenString =new TreeSet<Article>(compara_art);
         ordenString.add(firstA);
         ordenString.add(secondA);
         ordenString.add(threeA);
@@ -43,14 +46,11 @@ public class TestTreeSet {
 }
 
 
-class Article implements Comparable<Article>, Comparator<Article> {
+class Article implements Comparable<Article> {
 
     private int num;
     private String desc;
 
-    public Article(){
-
-    }
 
     public Article(int num, String desc){
         this.num = num;
@@ -66,12 +66,16 @@ class Article implements Comparable<Article>, Comparator<Article> {
         return desc;
     }
 
-    @Override
-    public int compare(Article o1, Article o2) {
-        String descriptionA = o2.getDesc();
-        String descriptionB = o1.getDesc();
 
-        return descriptionB.compareTo(descriptionA); // Devulve negativo positivo o un cero en base a la comparación.
-    }
 }
 
+class ComparatorArticle implements Comparator<Article>{
+
+    @Override
+    public int compare(Article o1, Article o2) {
+        String desc1 = o1.getDesc();
+        String desc2 = o2.getDesc();
+
+        return desc1.compareTo(desc2);
+    }
+}
