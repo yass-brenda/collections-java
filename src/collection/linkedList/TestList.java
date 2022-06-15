@@ -1,8 +1,6 @@
 package collection.linkedList;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class TestList {
     public static void main(String[] args) {
@@ -10,21 +8,26 @@ public class TestList {
         List<Integer> numbers;
         numbers = new ArrayList<>();
         numbers.add(1);
-        numbers.add(1);
+        numbers.add(2);
         numbers.add(1);
         numbers.add(2);
 
         System.out.println(numbers);
 
+
+
         /* ARRAYLIST VENTAJAS
         * Acepta repetidos
-        * Conforme se asignan
+        * Se colocan conforme  se asignan
         * faster accesing datas
         * Arreglo dinamico
         * No adecuado para eliminar ni agregar,
         * Si eliminas un elemento de enmedio del array list pues solo disminuye el contador de
         * elementos pues solo diminuye el contador de elementos.
+        *
+        * https://www.baeldung.com/java-collections
         * */
+
 
         List<Integer> numbers2;
         numbers2 =  new LinkedList<>();
@@ -57,6 +60,7 @@ public class TestList {
          * https://www.youtube.com/watch?v=pDTNUS8mgc0
          * https://docs.oracle.com/javase/8/docs/api/
          * https://www.youtube.com/watch?v=oMVRE-U6TTc&list=PLL8woMHwr36HmQfxqqqxns5GexTNmxFqK
+         * https://www.baeldung.com/
          * */
 
 

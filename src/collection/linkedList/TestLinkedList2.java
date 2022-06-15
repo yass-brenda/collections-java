@@ -22,6 +22,7 @@ public class TestLinkedList2 {
         System.out.println(capitales);
 
         ListIterator<String> iterCountries = countries.listIterator();
+
         ListIterator<String> iterCapitales = capitales.listIterator();
         while (iterCapitales.hasNext()){
             if (iterCountries.hasNext()){
