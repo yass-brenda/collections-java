@@ -7,7 +7,9 @@ import java.util.List;
 public class ArrayListOfArraysList {
     public static void main(String[] args) {
 
-        List<List<Integer>> listaGeneral =  new ArrayList<>();
+        List<List<Integer>> listaGeneral =  new ArrayList<>(5);
+
+        System.out.println(listaGeneral);
 
         List<Integer>lista1 = new ArrayList<>(Arrays.asList(41,77,74,22,44));
         List<Integer>lista2 = new ArrayList<>(Arrays.asList(12));
