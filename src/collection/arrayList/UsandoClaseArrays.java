@@ -2,13 +2,13 @@ package collection.arrayList;
 
 import java.util.Arrays;
 
-public class TestArray {
+public class UsandoClaseArrays {
 
     private int arrayInt[] = {1,2,3,4,5,6};
     private double arrayDouble[] = {8.4,9.3,0.2,7.9,3.4};
     private int arrayIntFill[] ,copyArrayInt[];
 
-    public TestArray(){
+    public UsandoClaseArrays(){
         arrayIntFill = new int[10];
         copyArrayInt = new int[arrayInt.length];
 
@@ -51,7 +51,7 @@ public class TestArray {
 
     public static void main( String args[] )
     {
-        TestArray usoArreglos = new TestArray();
+        UsandoClaseArrays usoArreglos = new UsandoClaseArrays();
         usoArreglos.imprimirArreglos();
         usoArreglos.imprimirIgualdad();
         int ubicacion = usoArreglos.buscarUnInt( 5 );
