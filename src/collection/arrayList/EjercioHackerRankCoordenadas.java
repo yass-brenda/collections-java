@@ -3,7 +3,7 @@ package collection.arrayList;
 import java.io.*;
 import java.util.*;
 
-public class EjemploArrayList {
+public class EjercioHackerRankCoordenadas {
 
     public static void main(String[] args) {
         List<List<Integer>> listaGeneral = new ArrayList<>();

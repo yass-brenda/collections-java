@@ -7,7 +7,7 @@ import java.util.ListIterator;
 
 import java.util.*;
 
-public class Test2ArrayList {
+public class ResumenClaseArrayList {
     public static void main(String[] args) {
 
         // Creando una lista de ArrayList vacia
