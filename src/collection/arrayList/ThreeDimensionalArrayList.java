@@ -23,8 +23,16 @@ public class ThreeDimensionalArrayList {
         System.out.println(space);
 
         // Añadiendo colores dando sus cordenadas
-        space.get(0).get(0).add(0,"Blue");
-        space.get(0).get(0).add(1,"red");
+        space.get(0).get(0).add(0,"RED");
+        space.get(0).get(0).add(1,"RED");
         System.out.println(space);
+
+
+        space.get(0).get(1).add(0,"Blue");
+        space.get(0).get(1).add(1,"Blue");
+        System.out.println(space);
+
+        //Tenga en cuenta que un punto con coordenadas (i, j, k)
+        // space.get(i).get(j).get(k)
     }
 }
